@@ -1,5 +1,11 @@
+import SearchBar from "./Components/SearchBar";
+
 function App() {
-  return <>Edited!</>;
+  return (
+    <>
+      <SearchBar />
+    </>
+  );
 }
 
 export default App;
