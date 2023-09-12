@@ -1,14 +1,22 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ setsearchQuery }) => {
   const searchBar = useRef(null);
-  const [searchQuery, setsearchQuery] = useState("");
 
-  const onBtnClick = ({ current: { value: inputVal } }) => {
+  const resetSearchBar = () => {
+    searchBar.current.value = "";
+  };
+
+  const getSearchQuery = (searchBar) => {
+    const inputVal = searchBar.current.value.trim();
+
     if (inputVal) {
-      console.log(inputVal);
+      // console.log("value");
       setsearchQuery(inputVal);
+      return;
     }
+
+    resetSearchBar();
     searchBar.current.focus();
   };
 
@@ -17,7 +25,7 @@ const SearchBar = () => {
       <input type="password" ref={searchBar} />
       <button
         onClick={() => {
-          onBtnClick(searchBar);
+          getSearchQuery(searchBar);
         }}
       >
         Check the password
