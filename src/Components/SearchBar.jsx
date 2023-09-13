@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const SearchBar = ({ setsearchQuery }) => {
+const SearchBar = ({ setSearchQuery }) => {
   const searchBar = useRef(null);
 
   const resetSearchBar = () => {
@@ -12,7 +12,7 @@ const SearchBar = ({ setsearchQuery }) => {
 
     if (inputVal) {
       // console.log("value");
-      setsearchQuery(inputVal);
+      setSearchQuery(inputVal);
       return;
     }
 
@@ -22,13 +22,13 @@ const SearchBar = ({ setsearchQuery }) => {
 
   return (
     <>
-      <input type="password" ref={searchBar} />
+      <input type="search" ref={searchBar} />
       <button
         onClick={() => {
           getSearchQuery(searchBar);
         }}
       >
-        Check the password
+        Search
       </button>
     </>
   );
