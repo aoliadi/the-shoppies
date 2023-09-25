@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import GetMovies from "./Components/GetMovies";
-import SearchBar from "./Components/SearchBar";
-// import "./index.css";
+import ShowMovies from "./Components/ShowMovies";
+import "./index.css";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,11 +26,12 @@ function App() {
   return (
     <>
       <section className="" style={{ border: "2px solid red" }}>
-        <SearchBar setSearchQuery={setSearchQuery} />
         <GetMovies
+          setSearchQuery={setSearchQuery}
           searchQuery={searchQuery}
           setSearchResults={setSearchResults}
         />
+        <ShowMovies />
       </section>
     </>
   );

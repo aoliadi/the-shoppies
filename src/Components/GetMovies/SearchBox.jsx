@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const SearchBar = ({ setSearchQuery }) => {
+const SearchBox = ({ setSearchQuery }) => {
   const searchBar = useRef(null);
 
   const resetSearchBar = () => {
@@ -22,16 +22,15 @@ const SearchBar = ({ setSearchQuery }) => {
 
   return (
     <>
-      <input type="search" ref={searchBar} />
-      <button
-        onClick={() => {
-          getSearchQuery(searchBar);
+      <input
+        type="search"
+        ref={searchBar}
+        onChange={(e) => {
+          setSearchQuery(e.target.value);
         }}
-      >
-        Search
-      </button>
+      />
     </>
   );
 };
 
-export default SearchBar;
+export default SearchBox;
