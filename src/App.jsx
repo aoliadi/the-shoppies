@@ -25,13 +25,14 @@ function App() {
 
   return (
     <>
-      <section className="" style={{ border: "2px solid red" }}>
+      <section className="">
+        {/* <section className="" style={{ border: "2px solid red" }}> */}
         <GetMovies
           setSearchQuery={setSearchQuery}
           searchQuery={searchQuery}
           setSearchResults={setSearchResults}
         />
-        <ShowMovies />
+        <ShowMovies searchResults={searchResults} />
       </section>
     </>
   );

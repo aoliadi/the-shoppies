@@ -1,0 +1,56 @@
+.wrapper {
+  max-width: 100%;
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+
+  gap: 2rem;
+
+  > * {
+    flex: auto; /* border: 1px solid red; */
+    /* flex: 1; */
+  }
+}
+
+.container {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 11.5rem;
+  height: 250px;
+  /* height: 365px  ; */
+  /* height: 370px; */
+
+  border: 1px solid #000;
+  overflow: hidden;
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.7rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  /* align-content: center; */
+  /* justify-content: space-between; */
+  transition: all 0.5s;
+
+  > * {
+    /* flex: 0 1 100px; */
+    /* margin-top: 12rem; */
+    /* border: 1px solid green; */
+  }
+
+  &:hover {
+    /* display: none; */
+    /* border: 1px solid red; */
+    max-width: 400px;
+    background-position: top;
+
+    height: 350px;
+    /* background: #fff; */
+    /* position: absolute; */
+  }
+}
