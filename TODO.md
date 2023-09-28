@@ -1,0 +1,26 @@
+# The Shoppies: Movie awards for entrepreneurs
+
+Shopify has branched out into movie award shows and we need your help. Please build us an app to help manage our movie nominations for the upcoming Shoppies.
+
+<em>[TODO.md spec & Kanban Board](https://bit.ly/3fCwKfM)</em>
+
+### Todo
+
+- [ ] Enter key triggers the fetch button and function
+- [ ] Check if a search result has a poster
+- [ ] Create poster using https://via.placeholder.com for results without Poster
+- [ ] Show spinner when fetching search query
+- [ ] Display a banner when the user has 5 nominations
+- [ ] Display "You have nominated x movies"
+- [ ] Create withdraw nomination (❌) button on the movie card
+- [ ] Create object to keep nominations
+- [ ] Create nominate button on the movie card
+
+### In Progress
+
+### Done ✓
+
+- [x] Get search input
+- [x] fetch search query
+- [x] Display search results
+- [x] Create Search btn
