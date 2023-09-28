@@ -1,9 +1,23 @@
+:root {
+  --margin: 0.65rem;
+}
+
 .title {
   font-size: 1rem;
-  color: #f1f1f1;
-  margin-top: 9rem;
-  margin-right: 0.65rem;
-  margin-left: 0.65rem;
+  /* color: #f1f1f1; */
+  color: #000;
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+  margin-right: var(--margin);
+  margin-left: var(--margin);
+  width: calc(100% - calc(var(--margin) * 2));
+  flex: 1 0 calc(250px - calc(var(--margin) * 6));
+  /* flex: 1 0 calc(370px - calc(var(--margin) * 6)); */
+
+  display: flex;
+
+  > span {
+    align-self: flex-end;
+  }
 }
 
 .releaseDate {
@@ -11,24 +25,17 @@
   font-weight: bold;
 
   padding: 0.25rem 0.7rem;
-  margin-top: 0.5rem;
-  margin-left: 0.65rem;
+  margin-left: var(--margin);
 
   background-color: #f1f1f1;
   /* background: #f7f4f4; */
-  border-radius: 10px;
-  /* padding: 3px 8px; */
+  border-radius: 1rem;
 }
 
 .summary {
   font-size: 0.85rem;
-  /* display: none; */
-  /* color: red; */
-  /* border: 1px solid red; */
-  margin-top: 1.5rem;
   background: #fff;
-  /* display: block; */
   flex: 1 0 100%;
-  padding: 0.5rem;
+  padding: var(--margin);
   height: 100%;
 }
