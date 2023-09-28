@@ -44,16 +44,16 @@
   /* justify-content: space-between; */
   transition: all 0.5s;
 
-  > * {
-    /* flex: 0 1 100px; */
-    /* margin-top: 12rem; */
-    /* border: 1px solid green; */
-  }
+  /* > * { */
+  /* flex: 0 1 100px; */
+  /* margin-top: 12rem; */
+  /* border: 1px solid green; */
+  /* } */
 
-  &:hover {
+  /* &:hover {
     max-width: 400px;
     background-position: top;
 
     height: 350px;
-  }
+  } */
 }
