@@ -3,35 +3,46 @@ import movie from "./movie.module.css";
 
 const Movie = ({ searchResults }) => {
   // const testMovieTitle = "Put Your Head on My Shoulder";
+
+  // https://placehold.co/600?text=Hello+World
+  // https://placehold.co/600x400/000000/FFFFFF/png
+
+  const placeholderImgLink = "https://placehold.co/250";
   const testMovieTitle = "The Hobbit";
   const yearOfRelease = 1977;
-  const testImgLink =
-    "https://m.media-amazon.com/images/M/MV5BN2ZmZGM3YTktOTk0Ni00Mjc4LThjYzEtYmExZGJiZjBlOTg3XkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_SX300.jpg";
-
-  const bgStyles = {
-    backgroundImage: `url(${testImgLink})`,
-  };
+  const testImgLink = "https://placehold.co/250";
 
   return (
     <>
       <ul className={card.wrapper}>
-        {searchResults.map((searchResult) => (
-          <li
-            key={searchResult.imdbID}
-            className={card.container}
-            style={{ backgroundImage: `url(${searchResult.Poster})` }}
-          >
-            <h3 className={movie.title}>
-              <span>{searchResult.Title}</span>
-            </h3>
-            <small className={movie.releaseDate}>{searchResult.Year}</small>
-            <p className={movie.summary}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              ullam repudiandae vel deleniti. Architecto eaque a, quibusdam
-              quaerat aliquam expedita?
-            </p>
-          </li>
-        ))}
+        {searchResults.map(({ Poster, Title, Type, Year, imdbID }) => {
+          if (Poster === "N/A") {
+            const posterContent = Title.replaceAll(" ", "+");
+            Poster = `${placeholderImgLink}?text=${posterContent}`;
+          }
+
+          return (
+            <li
+              key={imdbID}
+              className={card.container}
+              style={{ backgroundImage: `url(${Poster})` }}
+            >
+              <h3 className={movie.title}>
+                <span>{Title}</span>
+                {/* <span>{pos}</span> */}
+              </h3>
+              <span className="">
+                <small className={movie.releaseDate}>{Year}</small>
+                <small className={movie.releaseDate}>{Type}</small>
+              </span>
+              <p className={movie.summary}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                ullam repudiandae vel deleniti. Architecto eaque a, quibusdam
+                quaerat aliquam expedita?
+              </p>
+            </li>
+          );
+        })}
         {/* <li className={card.container} style={bgStyles}>
           <h3 className={movie.title}>
             <span>Lorem10</span>

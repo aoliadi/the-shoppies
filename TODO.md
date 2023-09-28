@@ -6,9 +6,7 @@ Shopify has branched out into movie award shows and we need your help. Please bu
 
 ### Todo
 
-- [ ] Enter key triggers the fetch button and function
-- [ ] Check if a search result has a poster
-- [ ] Create poster using https://via.placeholder.com for results without Poster
+- [ ] Enter key triggers the fetch button (and fetch function)
 - [ ] Show spinner when fetching search query
 - [ ] Display a banner when the user has 5 nominations
 - [ ] Display "You have nominated x movies"
@@ -20,6 +18,8 @@ Shopify has branched out into movie award shows and we need your help. Please bu
 
 ### Done ✓
 
+- [x] Check if a search result has a poster
+- [x] Create poster using https://placehold.co/ for results without Poster
 - [x] Get search input
 - [x] fetch search query
 - [x] Display search results
