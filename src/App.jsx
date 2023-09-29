@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
 import GetMovies from "./Components/GetMovies";
 import ShowMovies from "./Components/ShowMovies";
+import Loader from "./Components/Loader";
 import "./index.css";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
-  useEffect(() => {
-    console.log(searchQuery);
-
-    return () => {
-      // second
-    };
-  }, [searchQuery]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     console.log(searchResults);
@@ -31,8 +25,17 @@ function App() {
           setSearchQuery={setSearchQuery}
           searchQuery={searchQuery}
           setSearchResults={setSearchResults}
+          setIsLoading={setIsLoading}
         />
-        <ShowMovies searchResults={searchResults} />
+        {isLoading ? (
+          <>
+            <Loader />
+          </>
+        ) : (
+          <>
+            <ShowMovies searchResults={searchResults} />
+          </>
+        )}
       </section>
     </>
   );

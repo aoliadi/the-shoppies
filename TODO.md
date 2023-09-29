@@ -6,42 +6,25 @@ Shopify has branched out into movie award shows and we need your help. Please bu
 
 ### Todo
 
-<<<<<<< HEAD
-- [ ] Enter key triggers the fetch button (and fetch function)
-- [ ] Show spinner when fetching search query
-- [ ] Display a banner when the user has 5 nominations
-- [ ] Display "You have nominated x movies"
-- [ ] Create withdraw nomination (❌) button on the movie card
-- [ ] Create object to keep nominations
-- [ ] Create nominate button on the movie card
-=======
+- [ ] Focus on search input bar if search button is clicked and input bar is empty (or full of space)  
+- [ ] No re-fetching if the search query doesn't change and search button is clicked  
 - [ ] Enter key triggers the fetch button (and fetch function)  
-- [ ] Show spinner when fetching search query  
 - [ ] Display a banner when the user has 5 nominations  
 - [ ] Display "You have nominated x movies"  
 - [ ] Create withdraw nomination (❌) button on the movie card  
 - [ ] Create object to keep nominations  
 - [ ] Create nominate button on the movie card  
->>>>>>> 5e3eac743156b0143b8b22ea93e54aa0ad9aee9e
 
 ### In Progress
 
 
 ### Done ✓
 
-<<<<<<< HEAD
-- [x] Check if a search result has a poster
-- [x] Create poster using https://placehold.co/ for results without Poster
-- [x] Get search input
-- [x] fetch search query
-- [x] Display search results
-- [x] Create Search btn
-=======
+- [x] Show spinner when fetching search query  
 - [x] Check if a search result has a poster  
-- [x] Create poster using `https://placehold.co/` for results without Poster  
+- [x] Create poster using https://placehold.co/ for results without Poster  
 - [x] Get search input  
 - [x] fetch search query  
 - [x] Display search results  
 - [x] Create Search btn  
 
->>>>>>> 5e3eac743156b0143b8b22ea93e54aa0ad9aee9e

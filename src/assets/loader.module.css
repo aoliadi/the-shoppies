@@ -1,0 +1,30 @@
+.container {
+  /* border: 1px solid red; */
+  display: grid;
+  place-content: center;
+  height: 90vh;
+}
+
+.loader {
+  --width: 5rem;
+  --bd-width: 1rem;
+
+  width: var(--width);
+  height: var(--width);
+
+  border: var(--bd-width) solid #f7f7f7;
+  border-top: var(--bd-width) solid #56a5eb;
+  border-radius: 50%;
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
