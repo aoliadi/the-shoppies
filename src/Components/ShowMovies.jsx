@@ -1,4 +1,4 @@
-import Movie from "./Movie/Movie";
+import Movie from "./Movie";
 
 const ShowMovies = ({ searchResults }) => {
   // console.log(searchResults);

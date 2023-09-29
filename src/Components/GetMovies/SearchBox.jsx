@@ -11,7 +11,6 @@ const SearchBox = ({ setSearchQuery }) => {
     const inputVal = searchBar.current.value.trim();
 
     if (inputVal) {
-      // console.log("value");
       setSearchQuery(inputVal);
       return;
     }

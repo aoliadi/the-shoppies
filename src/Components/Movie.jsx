@@ -1,11 +1,8 @@
-import card from "./card.module.css";
-import movie from "./movie.module.css";
+import card from "../assets/card.module.css";
+import movie from "../assets/movie.module.css";
 
 const Movie = ({ searchResults }) => {
   // const testMovieTitle = "Put Your Head on My Shoulder";
-
-  // https://placehold.co/600?text=Hello+World
-  // https://placehold.co/600x400/000000/FFFFFF/png
 
   const placeholderImgLink = "https://placehold.co/250";
   const testMovieTitle = "The Hobbit";
@@ -29,7 +26,6 @@ const Movie = ({ searchResults }) => {
             >
               <h3 className={movie.title}>
                 <span>{Title}</span>
-                {/* <span>{pos}</span> */}
               </h3>
               <span className="">
                 <small className={movie.releaseDate}>{Year}</small>
