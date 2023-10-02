@@ -6,7 +6,6 @@ Shopify has branched out into movie award shows and we need your help. Please bu
 
 ### Todo
 
-- [ ] Focus on search input bar if search button is clicked and input bar is empty (or full of space)  
 - [ ] No re-fetching if the search query doesn't change and search button is clicked  
 - [ ] Display a banner when the user has 5 nominations  
 - [ ] Display "You have nominated x movies"  
@@ -19,6 +18,7 @@ Shopify has branched out into movie award shows and we need your help. Please bu
 
 ### Done ✓
 
+- [x] Focus on search input bar if search button is clicked and input bar is empty (or full of space)  
 - [x] Enter key triggers the fetch button (and fetch function)  
 - [x] Show spinner when fetching search query  
 - [x] Check if a search result has a poster  

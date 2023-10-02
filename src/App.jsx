@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import GetMovies from "./Components/GetMovies";
 import ShowMovies from "./Components/ShowMovies";
 import Loader from "./Components/Loader";
+import GetMovies from "./Components/GetMovies";
 import "./index.css";
 
 function App() {
@@ -27,15 +27,7 @@ function App() {
           setSearchResults={setSearchResults}
           setIsLoading={setIsLoading}
         />
-        {isLoading ? (
-          <>
-            <Loader />
-          </>
-        ) : (
-          <>
-            <ShowMovies searchResults={searchResults} />
-          </>
-        )}
+        {isLoading ? <Loader /> : <ShowMovies searchResults={searchResults} />}
       </section>
     </>
   );
