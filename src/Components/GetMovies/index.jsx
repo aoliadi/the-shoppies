@@ -11,18 +11,17 @@ const GetMovies = ({
 
   const apikey = "74b088c9";
 
-  const handleFetch = () => {
+  const handleFetch = (e) => {
+    e.preventDefault();
     setIsLoading(true);
 
     fetch(`http://www.omdbapi.com/?s=${searchQuery}&apikey=${apikey}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.Response);
-
         if (data.Response == "True") {
-          // console.log("true");
           setSearchResults([...data.Search]);
           setIsLoading(false);
+
           return;
         }
         console.log(data.Error);
@@ -31,10 +30,10 @@ const GetMovies = ({
 
   return (
     <>
-      {/* <form action="" className=""> */}
-      <SearchBox setSearchQuery={setSearchQuery} />
-      <SearchBtn handleFetch={handleFetch} />
-      {/* </form> */}
+      <form action="" className="" onSubmit={handleFetch}>
+        <SearchBox setSearchQuery={setSearchQuery} />
+        <SearchBtn handleFetch={handleFetch} />
+      </form>
     </>
   );
 };
